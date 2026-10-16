@@ -1,5 +1,5 @@
 
-const apiKey = "d2cf62b62ab0bf67c7d067d9f1aa4a31 ";
+const apiKey = "d2cf62b62ab0bf67c7d067d9f1aa4a31";
 
 function getWeather() {
 
@@ -11,7 +11,7 @@ function getWeather() {
         return;
     }
 
-    let url = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d2cf62b62ab0bf67c7d067d9f1aa4a31"
+    let url = "https://api.openweathermap.org/data/2.5/weather?q="
         + city + "&appid=" + apiKey + "&units=metric";
 
     fetch(url)
