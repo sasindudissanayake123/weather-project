@@ -8,17 +8,20 @@
 
 body {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(
-        135deg,
-        #185c91,
-        #4289b9,
-        #76b4d4
-    );
+    background-image: url("wp7991751.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
 }
+
 
 /* Main Container */
 
