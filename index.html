@@ -1,52 +1,96 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="weather-box">
+    <div class="weather-container">
 
-        <h1>Weather App</h1>
+        <!-- Left Side -->
+        <div class="left-panel">
 
-        <div class="search-box">
-            <input type="text" id="city" placeholder="Enter city name">
-            <button onclick="getWeather()">Search</button>
+            <h3>Weather App</h3>
+
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Search city...">
+                <button onclick="getWeather()">⌕</button>
+            </div>
+
+            <h4>Popular Cities</h4>
+
+            <div class="city-list">
+                <div onclick="searchCity('London')">London</div>
+                <div onclick="searchCity('Colombo')">Colombo</div>
+                <div onclick="searchCity('New York')">New York</div>
+                <div onclick="searchCity('Tokyo')">Tokyo</div>
+                <div onclick="searchCity('Dubai')">Dubai</div>
+                <div onclick="searchCity('Paris')">Paris</div>
+            </div>
+
         </div>
 
-        <p id="message">Enter a city to check the weather</p>
+        <!-- Main Weather Section -->
+        <div class="main-panel">
 
-        <div class="weather-info" id="weatherInfo">
+            <div class="top-bar">
+                <span>Weather Dashboard</span>
+                <span id="date">Today</span>
+            </div>
 
-            <h2 id="cityName">City Name</h2>
+            <div class="weather-info">
 
-            <img id="weatherIcon" src="" alt="Weather Icon">
-
-            <h1 id="temperature">--°C</h1>
-
-            <p id="description">Weather condition</p>
-
-            <div class="details">
-                <div class="detail-box">
-                    <h3>Humidity</h3>
-                    <p id="humidity">--%</p>
+                <div class="condition">
+                    <h2 id="description">Considerable Clouds</h2>
+                    <p id="cityName">London, GB</p>
                 </div>
 
-                <div class="detail-box">
-                    <h3>Wind Speed</h3>
-                    <p id="wind">-- m/s</p>
+                <div class="weather-icon" id="weatherIcon">
+                    ☁️
                 </div>
+
+            </div>
+
+            <div class="bottom-info">
+
+                <div class="info-box">
+                    <span>Feels Like</span>
+                    <h3 id="feelsLike">--°</h3>
+                </div>
+
+                <div class="info-box">
+                    <span>Humidity</span>
+                    <h3 id="humidity">--%</h3>
+                </div>
+
+                <div class="info-box">
+                    <span>Wind Speed</span>
+                    <h3 id="wind">-- m/s</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-panel">
+
+            <h1 id="temperature">16°</h1>
+
+            <p>Current Temperature</p>
+
+            <div class="extra-info">
+                <p>🌡️ Max Temp : <span id="maxTemp">--°</span></p>
+                <p>❄️ Min Temp : <span id="minTemp">--°</span></p>
+                <p>☁️ Weather : <span id="weatherType">--</span></p>
             </div>
 
         </div>
 
     </div>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
