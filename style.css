@@ -46,6 +46,7 @@ body {
 
 /* Left Panel */
 
+
 .left-panel {
     width: 23%;
     padding: 25px 18px;
@@ -57,20 +58,24 @@ body {
 
 .left-panel h3 {
     margin-bottom: 25px;
-    font-size: 20px;
+    font-size: 22px;
+    white-space: nowrap;
 }
 
 .search-box {
     display: flex;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .search-box input {
     width: 100%;
-    padding: 10px;
+    min-width: 0;
+    padding: 12px;
 
     border: none;
     outline: none;
+
     border-radius: 8px 0 0 8px;
 
     background: rgba(255, 255, 255, 0.85);
@@ -81,30 +86,13 @@ body {
     border: none;
     cursor: pointer;
 
-    background: #ffffff;
+    background: white;
     color: #2476a9;
 
     border-radius: 0 8px 8px 0;
     font-size: 18px;
 }
 
-.left-panel h4 {
-    margin-bottom: 15px;
-}
-
-.city-list div {
-    padding: 12px 10px;
-    margin-bottom: 5px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.city-list div:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
 
 /* Main Panel */
 
@@ -134,10 +122,10 @@ body {
 }
 
 .condition p {
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: bold;
 }
-
 .weather-icon {
     font-size: 100px;
     filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
